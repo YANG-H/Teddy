@@ -1,0 +1,337 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>TMainWindClass</class>
+ <widget class="QMainWindow" name="TMainWindClass">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>700</width>
+    <height>700</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Teddy by YANG Hao</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="tmainwind.qrc">
+    <normaloff>:/TMainWind/Resources/other/black/pencil_icon&amp;48.png</normaloff>:/TMainWind/Resources/other/black/pencil_icon&amp;48.png</iconset>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QMainWindow {
+	background-color: gray;
+	color: #DDDDDD
+} 
+QMenuBar {
+	background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,stop:0 transparent, stop:1 rgba(0, 0, 0, 100));
+}
+QMenuBar::item {
+	padding: 1px 7px;
+	background: transparent;
+}
+QMenuBar::item:selected { /* when selected using mouse or keyboard */
+    color: white;
+	background: rgba(100, 100, 255, 255);
+    border-radius: 3px;
+}
+QMenuBar::item:pressed {
+    color: white;
+	background: rgba(100, 100, 255, 255);
+	border-radius: 3px, 3px, 0, 0;
+}
+QMenu {
+	background-color: #323232; /* sets background of the menu */
+	color: white;
+	border: 1px solid black;
+} 
+QMenu::item {
+	background-color: transparent;
+} 
+QMenu::item:selected { /* when user selects item using mouse or keyboard */
+	background-color: #777777;
+}
+QMenu::item:checked {
+	background-color: #456789
+}
+QToolBar {
+	background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,stop:0 rgba(0, 0, 0, 100), stop:1 rgba(0, 0, 0, 100));	
+	border-color:#2020FF;
+	height:40px;
+}
+QStatusBar {
+	background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,stop:0 black, stop:1 rgba(0, 0, 0, 100));
+	color: #DDDDDD
+}
+QDialog {
+	background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,stop:0 #000000, stop:1 #767676);
+	color: #dddddd; 
+}
+QScrollBar:horizontal {
+	height: 20px; 
+}
+QScrollBar:vertical {
+	width: 20px; 
+}
+QTabWidget::pane {
+	border-top: 2px solid #C2C7CB;
+}
+QGroupBox {color:white}
+.QLabel { 
+	color: white;  
+}
+QProgressBar {
+     border: 1px solid grey;
+     border-radius: 3px;
+     text-align: center;
+}
+QProgressBar::chunk {
+     background-color: darkgrey;
+     width: 5px;
+     margin: 0.5px;
+}</string>
+  </property>
+  <widget class="QWidget" name="centralWidget"/>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>700</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuFile">
+    <property name="title">
+     <string>&amp;File</string>
+    </property>
+    <addaction name="actionNew"/>
+    <addaction name="actionOpen"/>
+    <addaction name="separator"/>
+    <addaction name="actionSave"/>
+    <addaction name="actionSaveAs"/>
+    <addaction name="separator"/>
+    <addaction name="actionExit"/>
+   </widget>
+   <widget class="QMenu" name="menuEdit">
+    <property name="title">
+     <string>&amp;Edit</string>
+    </property>
+    <addaction name="actionMeshView"/>
+    <addaction name="actionMeshSmooth"/>
+   </widget>
+   <widget class="QMenu" name="menuInfo">
+    <property name="title">
+     <string>&amp;Info</string>
+    </property>
+    <addaction name="actionInfo"/>
+   </widget>
+   <addaction name="menuFile"/>
+   <addaction name="menuEdit"/>
+   <addaction name="menuInfo"/>
+  </widget>
+  <widget class="QToolBar" name="mainToolBar">
+   <property name="windowTitle">
+    <string>Main ToolBar</string>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="actionNew"/>
+   <addaction name="actionOpen"/>
+   <addaction name="actionSave"/>
+   <addaction name="actionSaveAs"/>
+   <addaction name="actionInfo"/>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+  <widget class="QToolBar" name="editToolBar">
+   <property name="windowTitle">
+    <string>Edit ToolBar</string>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="actionMeshView"/>
+   <addaction name="actionMeshSmooth"/>
+  </widget>
+  <action name="actionNew">
+   <property name="icon">
+    <iconset resource="tmainwind.qrc">
+     <normaloff>:/TMainWind/Resources/toolbar/Add.png</normaloff>:/TMainWind/Resources/toolbar/Add.png</iconset>
+   </property>
+   <property name="text">
+    <string>New</string>
+   </property>
+   <property name="toolTip">
+    <string>Create a new document</string>
+   </property>
+   <property name="statusTip">
+    <string>Create a new document</string>
+   </property>
+   <property name="whatsThis">
+    <string>Create a new document</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+N</string>
+   </property>
+  </action>
+  <action name="actionOpen">
+   <property name="icon">
+    <iconset resource="tmainwind.qrc">
+     <normaloff>:/TMainWind/Resources/toolbar/Load.png</normaloff>:/TMainWind/Resources/toolbar/Load.png</iconset>
+   </property>
+   <property name="text">
+    <string>Open</string>
+   </property>
+   <property name="toolTip">
+    <string>Open document</string>
+   </property>
+   <property name="statusTip">
+    <string>Open document</string>
+   </property>
+   <property name="whatsThis">
+    <string>Open document</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+O</string>
+   </property>
+  </action>
+  <action name="actionSave">
+   <property name="icon">
+    <iconset resource="tmainwind.qrc">
+     <normaloff>:/TMainWind/Resources/toolbar/Save.png</normaloff>:/TMainWind/Resources/toolbar/Save.png</iconset>
+   </property>
+   <property name="text">
+    <string>Save</string>
+   </property>
+   <property name="toolTip">
+    <string>Save current document</string>
+   </property>
+   <property name="statusTip">
+    <string>Save current document</string>
+   </property>
+   <property name="whatsThis">
+    <string>Save current document</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+S</string>
+   </property>
+  </action>
+  <action name="actionInfo">
+   <property name="icon">
+    <iconset resource="tmainwind.qrc">
+     <normaloff>:/TMainWind/Resources/toolbar/Info.png</normaloff>:/TMainWind/Resources/toolbar/Info.png</iconset>
+   </property>
+   <property name="text">
+    <string>Information</string>
+   </property>
+   <property name="toolTip">
+    <string>Application infomation</string>
+   </property>
+   <property name="statusTip">
+    <string>Application infomation</string>
+   </property>
+   <property name="whatsThis">
+    <string>Application infomation</string>
+   </property>
+   <property name="shortcut">
+    <string>F1</string>
+   </property>
+  </action>
+  <action name="actionExit">
+   <property name="text">
+    <string>Exit</string>
+   </property>
+   <property name="toolTip">
+    <string>Exit application</string>
+   </property>
+  </action>
+  <action name="actionSaveAs">
+   <property name="icon">
+    <iconset resource="tmainwind.qrc">
+     <normaloff>:/TMainWind/Resources/toolbar/Save As.png</normaloff>:/TMainWind/Resources/toolbar/Save As.png</iconset>
+   </property>
+   <property name="text">
+    <string>Save As</string>
+   </property>
+   <property name="toolTip">
+    <string>Save as another file</string>
+   </property>
+   <property name="statusTip">
+    <string>Save as another file</string>
+   </property>
+   <property name="whatsThis">
+    <string>Save as another file</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Shift+S</string>
+   </property>
+  </action>
+  <action name="actionMeshSmooth">
+   <property name="icon">
+    <iconset resource="tmainwind.qrc">
+     <normaloff>:/TMainWind/Resources/toolbar/Pie Chart.png</normaloff>:/TMainWind/Resources/toolbar/Pie Chart.png</iconset>
+   </property>
+   <property name="text">
+    <string>Mesh Smooth</string>
+   </property>
+   <property name="toolTip">
+    <string>Mesh Smooth</string>
+   </property>
+   <property name="statusTip">
+    <string>Mesh Smooth</string>
+   </property>
+   <property name="whatsThis">
+    <string>Mesh Smooth</string>
+   </property>
+  </action>
+  <action name="actionMeshView">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="tmainwind.qrc">
+     <normaloff>:/TMainWind/Resources/toolbar/Picture.png</normaloff>:/TMainWind/Resources/toolbar/Picture.png</iconset>
+   </property>
+   <property name="text">
+    <string>Mesh View</string>
+   </property>
+   <property name="toolTip">
+    <string>Mesh View</string>
+   </property>
+   <property name="statusTip">
+    <string>Mesh View</string>
+   </property>
+   <property name="whatsThis">
+    <string>Mesh View</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources>
+  <include location="tmainwind.qrc"/>
+ </resources>
+ <connections>
+  <connection>
+   <sender>actionExit</sender>
+   <signal>triggered()</signal>
+   <receiver>TMainWindClass</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>297</x>
+     <y>245</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>

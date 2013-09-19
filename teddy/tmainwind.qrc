@@ -1,0 +1,33 @@
+<RCC>
+  <qresource prefix="/TMainWind">
+    <file>Resources/other/white/pencil_icon&amp;16.png</file>
+    <file>Resources/other/white/pencil_icon&amp;24.png</file>
+    <file>Resources/other/white/pencil_icon&amp;32.png</file>
+    <file>Resources/other/white/pencil_icon&amp;48.png</file>
+    <file>Resources/toolbar/Save As.png</file>
+    <file>Resources/toolbar/Add.png</file>
+    <file>Resources/toolbar/Back.png</file>
+    <file>Resources/toolbar/Bar Chart.png</file>
+    <file>Resources/toolbar/Comment.png</file>
+    <file>Resources/toolbar/Delete.png</file>
+    <file>Resources/toolbar/Email.png</file>
+    <file>Resources/toolbar/Exit.png</file>
+    <file>Resources/toolbar/Info.png</file>
+    <file>Resources/toolbar/Line Chart.png</file>
+    <file>Resources/toolbar/Load.png</file>
+    <file>Resources/toolbar/Loading.png</file>
+    <file>Resources/toolbar/Modify.png</file>
+    <file>Resources/toolbar/Next.png</file>
+    <file>Resources/toolbar/Picture.png</file>
+    <file>Resources/toolbar/Pie Chart.png</file>
+    <file>Resources/toolbar/Print.png</file>
+    <file>Resources/toolbar/Profile.png</file>
+    <file>Resources/toolbar/Save.png</file>
+    <file>Resources/toolbar/Search.png</file>
+    <file>Resources/toolbar/Warning.png</file>
+    <file>Resources/other/black/pencil_icon&amp;16.png</file>
+    <file>Resources/other/black/pencil_icon&amp;24.png</file>
+    <file>Resources/other/black/pencil_icon&amp;32.png</file>
+    <file>Resources/other/black/pencil_icon&amp;48.png</file>
+  </qresource>
+</RCC>
