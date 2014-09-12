@@ -1,0 +1,11 @@
+include_directories (${REQUIRED_INCLUDES})
+
+file (GLOB LIB_HEADERS ${CMAKE_CURRENT_SOURCE_DIR}/*.h)
+file (GLOB LIB_SOURCES ${CMAKE_CURRENT_SOURCE_DIR}/*.cpp)
+file (GLOB LIB_QRC ${CMAKE_CURRENT_SOURCE_DIR}/*.qrc)
+
+add_executable (${PROJECT_NAME} ${LIB_HEADERS} ${LIB_SOURCES} ${LIB_QRC})
+target_link_libraries (${PROJECT_NAME}
+	${REQUIRED_LIBS}
+)
+
