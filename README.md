@@ -1,3 +1,6 @@
+Teddy
+========
+
 本项目基于论文 Teddy: A Sketching Interface for 3D Freeform Design 实现了一个基于手绘草图进行三维形体设计的程序。
 
 使用的第三方库包括 Qt 5 和 OpenMesh 2。
